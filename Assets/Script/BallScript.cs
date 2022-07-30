@@ -19,8 +19,19 @@ public class BallScript : MonoBehaviour
         this.sprite = gameObject.GetComponent<SpriteRenderer>();
         this.speed = new Vector2(this.speedBall * Time.deltaTime, this.speedBall * Time.deltaTime);
 
-        int dir = Random.Range(0, 2);
-        switch(dir)
+        int dirX = Random.Range(0, 2);
+        int dirY = Random.Range(0, 2);
+
+        switch (dirX)
+        {
+            case 0:
+                break;
+            case 1:
+                this.changeDirX();
+                break;
+        }
+
+        switch (dirY)
         {
             case 0:
                 break;
