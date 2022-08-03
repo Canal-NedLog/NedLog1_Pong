@@ -15,6 +15,7 @@ public class PaddleScript : MonoBehaviour
     {
         this.gScript = FindObjectOfType<GameManagerScript>();
         this.sprite = gameObject.GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame

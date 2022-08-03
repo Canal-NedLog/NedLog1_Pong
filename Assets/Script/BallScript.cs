@@ -19,27 +19,23 @@ public class BallScript : MonoBehaviour
         this.sprite = gameObject.GetComponent<SpriteRenderer>();
         this.speed = new Vector2(this.speedBall * Time.deltaTime, this.speedBall * Time.deltaTime);
 
-        int dirX = Random.Range(0, 2);
-        int dirY = Random.Range(0, 2);
-
-        switch (dirX)
+        switch(this.gScript.DirX)
         {
-            case 0:
-                break;
-            case 1:
+            case -1:
                 this.changeDirX();
                 break;
+            case 1:
+                break;
         }
 
-        switch (dirY)
+        switch (this.gScript.DirY)
         {
-            case 0:
-                break;
-            case 1:
+            case -1:
                 this.changeDirY();
                 break;
+            case 1:
+                break;
         }
-        
     }
 
     // Update is called once per frame
@@ -61,11 +57,13 @@ public class BallScript : MonoBehaviour
 
     private void changeDirX()
     {
+        this.gScript.DirX *= -1;
         this.speed.x = -this.speed.x;
     }
 
     private void changeDirY()
     {
+        this.gScript.DirY *= -1;
         this.speed.y = -this.speed.y;
     }
 

@@ -546,6 +546,8 @@ MonoBehaviour:
   ball: {fileID: 5637485302768739627, guid: 24d5d90e843077b4e99cb89f2e918a26, type: 3}
   ballScene: {fileID: 181067599}
   winValue: 11
+  dirX: 0
+  dirY: 0
 --- !u!1 &276336646
 GameObject:
   m_ObjectHideFlags: 0

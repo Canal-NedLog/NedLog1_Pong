@@ -13,6 +13,7 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] private int winValue;
     private BallScript bScript;
     private bool inGame = false;
+    [SerializeField] private int dirX, dirY;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,8 @@ public class GameManagerScript : MonoBehaviour
         this.rect = new Rect(0, 0, 18, 10);
         this.rect.center = Vector3.zero;
         this.bScript = FindObjectOfType<BallScript>();
+        this.dirX = 1;
+        this.dirY = 1;
     }
 
     // Update is called once per frame
@@ -99,5 +102,17 @@ public class GameManagerScript : MonoBehaviour
     {
         set { this.inGame = value; }
         get { return this.inGame; }
+    }
+
+    public int DirX
+    {
+        set { this.dirX = value; }
+        get { return this.dirX; }
+    }
+
+    public int DirY
+    {
+        set { this.dirY = value; }
+        get { return this.dirY; }
     }
 }
